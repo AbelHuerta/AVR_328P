@@ -14,8 +14,8 @@
 #define  EEPROM2 0b10100000
 
 char Str_1[] = "hola epprom2";
-char Str_2[] = "IEE";
-char Str_3[] = "CURSO";
+char Str_2[] = "zxz";
+char Str_3[] = "asd";
 
 void Write_EEPROM_I2C(char *ptr_Str, uint16_t ADD_EEP);
 
