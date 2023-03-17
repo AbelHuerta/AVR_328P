@@ -57,7 +57,7 @@ int main(void)
 	
 	LCD_AVR_Init();
 	LCD_AVR_Set_Cursor(0,Fila1);
-	LCD_AVR_Print_String("-----CURSOS AVR-----");
+	LCD_AVR_Print_String("--------------------");
 	LCD_AVR_Set_Cursor(0,Fila2);
 	LCD_AVR_Print_String("-----ABEL HUERTA----");
 	//UBICACION DEL DUTY
@@ -114,7 +114,7 @@ ISR(TIMER0_COMPA_vect){
 ISR(USART_RX_vect){
 	byte = UDR0;
 	if(byte == 'X'){
-		bufferRx[RxCount] = '\n';			//SE AÑADE EL CARACTER FINAL
+		bufferRx[RxCount] = '\n';			//SE AÃ‘ADE EL CARACTER FINAL
 		duty = atoi((char*)bufferRx); //CONVIERTE EL NUMERO A ENTERO
 		memset(bufferRx,0,RxCount); //LIMPIA EL BUFFER
 		RxCount = 0;
